@@ -36,7 +36,12 @@ Step 7: Install Django 1.11 : Command = pip install django == 1.11
 Step 8 : Open XAMP Control Panel and start Apace and MySQL
 
 Step 9: Import database : Open the URL
-http://127.0.0.1/phpmyadmin and click on create database and create the database with same name as the sql file, it will be available into your extracted folder Step 10: Choose the database from left sidepanel Step 11: Click on Import and choose the sql file from extracted project folder
+http://127.0.0.1/phpmyadmin and click on create database and create the database with same name as the sql file, it will be available into your extracted folder 
+
+Step 10: Choose the database from left sidepanel
+
+Step 11: Click on Import and choose the sql file from extracted project folder
+
 Step 12: Click on Go, all the tables will be imported into the database.
 
 What are the software requirements for running your project ?
