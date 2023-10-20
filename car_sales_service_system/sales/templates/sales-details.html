@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block content %}
+<script>
+  $( function() {
+    $( "#product_dob" ).datepicker();
+  } );
+  </script>
+
+<div class="wrapper col5">
+  <div id="container">
+  <div id="respond">
+		<form enctype="multipart/form-data" method="post" class="form-signin wow fadeInUp" action="">
+			{% csrf_token %}
+			<h2 class="form-signin-heading">
+				Details of Order ID : {{order_details.order_id}}
+			</h2>
+			{% if messages %}
+				<div class="alert alert-success fade in" style="margin:10px;">
+					{% for message in messages %}
+						<strong>{{ message }}</strong>
+					{% endfor %}
+				</div>
+			{% endif %}
+				<div style="margin-bottom: 30px;">
+					<table style="width: 100%;">
+						<tr>
+							<td>Customer Name : {{order_details.order_customer_name}}</td>
+							<td>Customer Mobile : {{order_details.order_customer_mobile}}</td>
+						</tr>
+					</table>
+					<input type="hidden" value="create_order" name="act">
+				</div>
+				<h2 class="form-signin-heading">
+					Order Items
+				</h2>
+				<table style="width: 100%;" border="1">
+					<thead>
+						<tr>
+							<th>Sr. No</th>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Company</th>
+							<th>Total Cost</th>
+							</tr>
+					</thead>
+					<tbody>
+					{% for items in orderItems %}
+						<tr>
+							<td style="text-align:center; font-weight:bold;">{{ forloop.counter }}</td>
+							<td>{{items.product_name}}</td>
+							<td>{{items.product_type}}</td>
+							<td>{{items.product_company}}</td>
+							<td>{{items.oi_cost}}</td>
+						</tr>
+					{% endfor %}
+						<tr style="background-color: #427a8c; color: #FFFFFF; font-size: 13px; font-weight: bold;">
+							<td colspan="4" style="text-align: right;">Total Cost :</td>
+							<td style="text-align: left;">{{total_cost}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align: right;">
+					<input name="button" type="submit" id="submit" value="Print" style="width:200px;" onclick="window.print()" />
+				</div>
+			</div>
+	</div>
+</div>
+</div>
+{% endblock content %}

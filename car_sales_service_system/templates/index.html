@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+#column {
+  float: none;
+  width: 100%;
+  margin-top: 30px;
+}
+#column .holder, #column #featured {
+  width: 100%;
+}
+#column #latestnews li {
+  clear: both;
+  height: 90px;
+  padding: 0px 0px 0px 0px;
+  margin:  0px 0px 0px 0px;
+}
+#container {
+  padding:0px 0px 0px 0px;
+}
+</style>
+    <div class="wrapper col3">
+  <div id="intro">
+    <div><img src="/assets/img/logo.jpg" alt="" style="width:100%; height:300px; " /></div>
+    <br class="clear" />
+  </div>
+</div>
+
+<div class="wrapper col5">
+  <div id="container">
+    <div id="content" style="width: 100%;">
+      <div id="column">
+        <div class="holder">
+          <h2>Modules of Project</h2>
+          <ul id="latestnews">
+            <li> <img class="imgl" src="/assets/img/sales.jpg" alt="" style="width:100px; height:75px"/>
+              <p><strong><a href="#">Product Management</a></strong></p>
+              <p>Traditionally manual systems were used that rely on highly skilled people laboriously adding up paper cards which have times stamped onto them using a time stamping machine such as the Bundy Clock. Time stamping machines were used for over a century but have since been phased out and replaced with cheaper automated systems which eliminate the need for payroll staff to manually input product hours.</p>
+            </li>
+            <li class="last"> <img class="imgl" src="/assets/img/customer.jpg" alt="" style="width:100px; height:75px" />
+              <p><strong><a href="#">Sales Management</a></strong></p>
+              <p>Traditionally manual systems were used that rely on highly skilled people laboriously adding up paper cards which have times stamped onto them using a time stamping machine such as the Bundy Clock. Time stamping machines were used for over a century but have since been phased out and replaced with cheaper automated systems which eliminate the need for payroll staff to manually input product hours.</p>
+            </li>
+            <li class="last"> <img class="imgl" src="/assets/img/userlogin.jpg" alt="" style="width:100px; height:75px" />
+              <p><strong><a href="#">Login Management</a></strong></p>
+              <p>Traditionally manual systems were used that rely on highly skilled people laboriously adding up paper cards which have times stamped onto them using a time stamping machine such as the Bundy Clock. Time stamping machines were used for over a century but have since been phased out and replaced with cheaper automated systems which eliminate the need for payroll staff to manually input product hours.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>About Car Sales and Service System</h2>
+      <p>Digitization is causing major transformational pressure in sales and after sales services. There have never been so many ways to focus on customers and offer them tailored services before, during and after their purchasing decision. Whether the object in question is a car, manufacturing plant or wind turbine, sales and after sales processes must always focus on the customer if they are to achieve and maintain a consistently high level of satisfaction. Digitizing value chains opens up an entirely new dimension of customer interaction. This applies to plant engineers and operators, as well as to car manufacturers and dealers.</p>
+      <p>When the customer is present in the showroom, innovative and above all situation-specific forms of dialog are required. Information and offers in real time with no delay are crucial to the sales and after sales service. However, mobile solutions not only play a part in the process of purchasing automobiles – industry also benefits from this trend and is able to build on it. For example, operators of plants and machines can use remote access and mobile control to conduct complex maintenance activities. Real-time support employing digital documentation is the central issue for sales and after sales services and the key to success. The range of new opportunities can be extended almost at will, and T-Systems offers consulting services that will ensure the digital transformation is successful.</p> 
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+  {% endblock content %}
+

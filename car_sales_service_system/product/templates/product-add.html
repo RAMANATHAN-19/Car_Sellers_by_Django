@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<script>
+  $( function() {
+    $( "#product_dob" ).datepicker();
+  } );
+  </script>
+
+<div class="wrapper col5">
+  <div id="container">
+  <div id="respond">
+		<form enctype="multipart/form-data" method="post" class="form-signin wow fadeInUp" action="" style="max-width:60%">
+			{% csrf_token %}
+			<h2 class="form-signin-heading">
+				Add/Edit Cars Records
+			</h2>
+			{% if messages %}
+				<div class="alert alert-success fade in" style="margin:10px;">
+					{% for message in messages %}
+						<strong>{{ message }}</strong>
+					{% endfor %}
+				</div>
+			{% endif %}
+				<p>
+					<input type="text" class="form-control" placeholder="Project Name" autofocus="" name="product_name" id="product_name" value="{{productdetails.product_name}}">
+				</p>
+				<p>
+					<input type="text" class="form-control" placeholder="Product Cost" autofocus="" name="product_cost" id="user_password" value="{{productdetails.product_cost}}">
+				</p>
+				<p>
+					<input type="text" placeholder="Product Type" autofocus="" name="product_type" id="product_type" value="{{productdetails.product_type}}">
+				</p>
+				<p>
+					<input type="text" placeholder="Product Company" autofocus="" name="product_company" id="product_company" value="{{productdetails.product_company}}">
+				</p>
+				<p>
+					<input type="text" class="form-control" placeholder="Product Stock" autofocus="" name="product_stock" id="product_stock" value="{{productdetails.product_stock}}">
+				</p>
+				<p>
+					<input name="submit" type="submit" id="submit" value="Submit" />
+				</p>
+			</div>
+			<input type="hidden" name="act" value="save_user">
+			<input type="hidden" name="avail_image" value="{{productdetails.user_image}}">
+			<input type="hidden" name="user_id" value="{{productdetails.user_id}}">
+		</form>
+	</div>
+</div>
+</div>
+{% endblock content %}
