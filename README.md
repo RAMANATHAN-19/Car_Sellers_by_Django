@@ -1,7 +1,13 @@
 # car_sales
 Python Django Project for Car dealers to sales and service.
+
 Step 1: Uninstall all MySQL Softwares and Python Software from Control Panel if you have.
-Step 2: Install Python 2.7.9 in C Drive Step 3: Install XAMP Server in C Drive Step 4: Set Path for "c:/python27" and
+
+Step 2: Install Python 2.7.9 in C Drive
+
+Step 3: Install XAMP Server in C Drive 
+
+Step 4: Set Path for "c:/python27" and
 "c:/python27/Scripts" folder in enviroment variables
 • Right click on "My PC" or "My Computer" and click on properties.
 • Click on "Advanced System Settings" link, it will be available on your left sidebar
