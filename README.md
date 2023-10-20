@@ -1,5 +1,5 @@
 # car_sales
-Python Django Project for Car dealers to sales and service.
+Python Django Project for Car dealers to sales.
 
 Step 1: Uninstall all MySQL Softwares and Python Software from Control Panel if you have.
 
